@@ -1,0 +1,22 @@
+{
+  "rewrites": [
+    { "source": "/verify-email", "destination": "/index.php" },
+    { "source": "/verify-email/(.*)", "destination": "/index.php" },
+    { "source": "/confirm-password", "destination": "/index.php" },
+    { "source": "/password/(.*)", "destination": "/index.php" },
+    { "source": "/login", "destination": "/index.php" },
+    { "source": "/register", "destination": "/index.php" },
+    { "source": "/forgot-password", "destination": "/index.php" },
+    { "source": "/reset-password/(.*)", "destination": "/index.php" },
+    { "source": "/dashboard", "destination": "/index.php" },
+    { "source": "/chirps/(.*)", "destination": "/index.php" },
+    { "source": "/profile/(.*)", "destination": "/index.php" },
+    { "source": "/(.*)", "destination": "/index.php" }
+  ],
+  "build": {
+    "out": "public/dist",
+    "hooks": {
+      "postbuild": "php artisan migrate --force && php artisan db:seed --force"
+    }
+  }
+}
