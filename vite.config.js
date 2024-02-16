@@ -12,6 +12,6 @@ export default defineConfig({
         }),
     ],
     build: {
-        outDir: 'public/dist', // Cambia 'public/dist' por la ruta deseada
+        outDir: 'dist', // Cambia 'public/dist' por la ruta deseada
     },
 });
